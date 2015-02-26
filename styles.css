@@ -1,0 +1,30 @@
+body {
+    background-color: #631145;
+
+}
+.title {
+    color: #DE6500;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    text-align:center;
+}
+input[type="button"] {
+    cursor: pointer;
+    padding: 5px 25px;
+    background: #C785AE;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.maindiv{
+	background-color: #8f1863;
+	width:700px;
+	height:600px;
+	margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
