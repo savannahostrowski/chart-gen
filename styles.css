@@ -22,11 +22,12 @@ input[type="button"] {
 
 .maindiv{
 	background-color: #8f1863;
-	width:700px;
-	height:600px;
+	width:900px;
+	height:800px;
 	margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
+    padding:15px;
 }
 
 .chartToggle{
