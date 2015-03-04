@@ -18,8 +18,31 @@
             <h2 class ="title">Enter your data into the text box below to visualize!</h2>
             <input type="text" name="dataBox" id="dataInput" />
             <input type="button" value="Graph me!" onClick="submitdata(this.form);">
+
+            <h3 class="chartToggle"> Select your chart type</h3>
+            <div class="topcoat-button-bar">
+               <label class="topcoat-button-bar__item">
+                 <input type="checkbox">
+                 <button class="topcoat-button-bar__button">Line</button>
+               </label>
+               <label class="topcoat-button-bar__item">
+                 <input type="checkbox">
+                 <button class="topcoat-button-bar__button">Bar</button>
+               </label>
+               <label class="topcoat-button-bar__item">
+                 <input type="checkbox">
+                 <button class="topcoat-button-bar__button">Scatter</button>
+               </label>
+               <label class="topcoat-button-bar__item">
+                 <input type="checkbox">
+                 <button class="topcoat-button-bar__button">Pie</button>
+               </label>
+            </div>
+           <div class="output">
+            <script src="chart.js"></script>
+           </div>
+            </div>
         </form>
-        <script src="chart.js"></script>
     </div>
 </body>
 
