@@ -6,9 +6,9 @@ var svg = d3.select("body")
 			.append("svg")
 			.attr("width", w)
 			.attr ("height", h);
- //toggle to select chart type
 
-
+//submit data by clicking button
+//converts string data to an array
 function submitdata(frm){
 	data = frm.dataBox.value.split(',');
 	for (var i=0; i < data.length; i++){
@@ -18,26 +18,6 @@ function submitdata(frm){
 	barChart();
 }
 
-function colourSelect(){
-  var cw = Raphael.colorwheel($("#colourSelect .colorwheel")[0],150),
-      onchange_el = $("#colourSelect .onchange"),
-      ondrag_el = $("#colourSelect .ondrag");
-      cw.color("#F00");
-
-  function start(){ondrag_el.show()}
-  function stop(){ondrag_el.hide()}
-
-  cw.ondrag(start, stop);
-  cw.onchange(function(color)
-    {
-      var colors = [parseInt(color.r), parseInt(color.g), parseInt(color.b)]
-      onchange_el.css("background", color.hex).text("RGB:"+colors.join(", "))
-    })
-
-}
-//submit data
-	// error for numbers in pie unless fraction/percent
-	//bar,scatter, line -> numbers
 
 //bar function
 function barChart() {
@@ -76,6 +56,3 @@ function drawLabelsBar(){
 			"fill": "#ffffff"
 		});
 	}
-
-colourSelect();
-

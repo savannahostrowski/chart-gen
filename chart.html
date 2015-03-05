@@ -20,10 +20,11 @@
 <div class="maindiv">
         <form name="data">
             <h2 class ="title">Enter your data into the text box below to visualize!</h2>
+            <h3> Step 1: Input numerical data</h3>
             <input type="text" name="dataBox" id="dataInput" />
             <input type="button" value="Graph me!" onClick="submitdata(this.form);">
 
-            <h3 class="chartToggle"> Select your chart type</h3>
+            <h3> Step 2: Select your chart type</h3>
             <div class="topcoat-button-bar">
                <label class="topcoat-button-bar__item">
                  <input type="checkbox">
@@ -42,6 +43,11 @@
                  <button class="topcoat-button-bar__button">Pie</button>
                </label>
             </div>
+            <h3>Step 3: Select your chart colours</h3>
+            <canvas id="myCanvas" width="500" height="500">
+            </canvas>
+            <script src="colourselector.js"></script>
+          </div>
            <div class="output">
             <script src="chart.js"></script>
            </div>

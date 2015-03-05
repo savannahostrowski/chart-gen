@@ -14,7 +14,7 @@ input[type="button"] {
     background: #C785AE;
     color: black;
     font-family: 'Lato', sans-serif;
-    font-size: 10px;
+    font-size: 12px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
@@ -30,11 +30,10 @@ input[type="button"] {
     padding:15px;
 }
 
-.chartToggle{
-    color: #DE6500;
-    font-size: 15px;
-    font-family: 'Lato', sans-serif;
-    text-align:center;
+h3 {
+  color: #DE6500;
+  font-size: 15px;
+  font-family: 'Lato', sans-serif;
 }
 
 :focus {
@@ -66,8 +65,9 @@ input[type="button"] {
   display: table;
   table-layout: fixed;
   white-space: no-wrap;
-  margin: 0;
   padding: 0;
+  margin-right: 0 auto;
+  margin-left: 0 auto;
 }
 
 .topcoat-button-bar__item {
@@ -153,3 +153,4 @@ input[type="button"] {
 .output{
     background-color: plum;
 }
+
