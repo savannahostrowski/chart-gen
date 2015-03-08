@@ -11,8 +11,10 @@ $(document).ready(function() {
 
     function drawSegmentCircle() {
         for (i = 0; i < 4; i++) {
-        	startAngle = start * Math.PI;
-        	endAngle = end * Math.PI
+        	for (i = 0; i < 1; i++){
+        		startAngle = start * Math.PI;
+        		endAngle = end * Math.PI;
+        	}
         	for (i = 1; i < 4; i++){
       			startAngle = endAngle;
       			endAngle = (startAngle + 0.5) * Math.PI;
