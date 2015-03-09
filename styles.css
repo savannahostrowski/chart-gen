@@ -1,17 +1,18 @@
 body {
-    background-color: #631145;
+    background-color: white;
 
 }
 .title {
-    color: #DE6500;
+    color: black;
     font-size: 20px;
     font-family: 'Lato', sans-serif;
     text-align:center;
 }
+
 input[type="button"] {
     cursor: pointer;
     padding: 5px 25px;
-    background: #C785AE;
+    background: darkcyan;
     color: black;
     font-family: 'Lato', sans-serif;
     font-size: 12px;
@@ -21,17 +22,18 @@ input[type="button"] {
 }
 
 .maindiv{
-	background-color: #8f1863;
+	background-color: grey;
 	width:900px;
 	height:800px;
 	margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    padding:15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding:15px;
+
 }
 
 h3 {
-  color: #DE6500;
+  color: black;
   font-size: 15px;
   font-family: 'Lato', sans-serif;
 }
