@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     var canvas = document.getElementById('myCanvas');
     var context = canvas.getContext('2d');
     var x = canvas.width / 2;
@@ -7,31 +7,37 @@ $(document).ready(function() {
     var start = 0;
     var end = 0.5;
     var counterClockwise = false;
-    var colours = ['#303f9f','#f50057','#ffab00','#00bfa5']
+    var colours = ['#303f9f', '#f50057', '#ffab00', '#00bfa5'];
 
     function drawSegmentCircle() {
-        for (i = 0; i < 4; i++) {
-        	for (i = 0; i < 1; i++){
-        		startAngle = start * Math.PI;
-        		endAngle = end * Math.PI;
-        	}
-        	for (i = 1; i < 4; i++){
-      			startAngle = endAngle;
-      			endAngle = (startAngle + 0.5) * Math.PI;
-       		}
-       		for (i = 0; i < colours.length; i++){
-      			colour = colours[i];
-      			console.log(colour);
-      		}
+        startAngle = start * Math.PI;
+        endAngle = end * Math.PI;
+        context.beginPath();
+        context.arc(x, y, radius, startAngle, endAngle, counterClockwise);
+        context.lineWidth = 100;
+        //line colour
+        context.strokeStyle = colours[0];
+        context.stroke();
+
+        var SEGMENTS = 4;
+        var FULL_CIRCLE = 2 * Math.PI;
+        // First, determine what angle each segment will be (like, how big)
+        // then we can just bump this up by one for each iteration.
+        // In this case, each segment will have angle Math.PI / 2
+        var segmentAngle = FULL_CIRCLE / SEGMENTS;
+        for (var i = 0; i < SEGMENTS; ++i) {
+            var startAngle = segmentAngle * i;
+            var endAngle = startAngle + segmentAngle;
+            // Draw()
             context.beginPath();
             context.arc(x, y, radius, startAngle, endAngle, counterClockwise);
             context.lineWidth = 100;
             //line colour
-            context.strokeStyle = colour;
+            context.strokeStyle = colours[i];
             context.stroke();
         }
-    }
+    }        
+
     drawSegmentCircle();
+
 });
-
-
