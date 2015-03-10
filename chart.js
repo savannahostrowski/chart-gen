@@ -7,6 +7,8 @@ var svg = d3.select("body")
 			.attr("width", w)
 			.attr ("height", h);
 
+
+
 //submit data by clicking button
 //converts string data to an array
 function submitdata(frm){
@@ -15,7 +17,6 @@ function submitdata(frm){
 		data[i] = +data[i];
 	}
 	console.log('The data used is ' + data);
-	barChart();
 }
 
 
@@ -54,5 +55,20 @@ function drawLabelsBar(){
 			"font-family": "sans-serif",
 			"font-size": 12,
 			"fill": "#ffffff"
+		});
+	}
+
+	function initialize(){
+		$( "#linebutton" ).click(function() {
+		  console.log('coming soon');
+		});
+		$( "#barbutton" ).click(function() {
+		  barChart();
+		});
+		$( "#piebutton" ).click(function() {
+		  console.log('coming soon');
+		});
+		$( "#scatterbutton" ).click(function() {
+		  console.log('coming soon');
 		});
 	}

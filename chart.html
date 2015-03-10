@@ -20,37 +20,37 @@
 <div class="maindiv">
         <form name="data">
             <h2 class ="title">Enter your data into the text box below to visualize!</h2>
-            <h3> Step 1: Input numerical data</h3>
-            <input type="text" name="dataBox" id="dataInput" />
-            <input type="button" value="Graph me!" onClick="submitdata(this.form);">
-
-            <h3> Step 2: Select your chart type</h3>
+            <h3> Step 1: Select your chart type</h3>
             <div class="topcoat-button-bar">
                <label class="topcoat-button-bar__item">
                  <input type="checkbox">
-                 <button class="topcoat-button-bar__button">Line</button>
+                 <button class="topcoat-button-bar__button" id="linebutton">Line</button>
                </label>
                <label class="topcoat-button-bar__item">
                  <input type="checkbox">
-                 <button class="topcoat-button-bar__button">Bar</button>
+                 <button class="topcoat-button-bar__button" id="barbutton">Bar</button>
                </label>
                <label class="topcoat-button-bar__item">
                  <input type="checkbox">
-                 <button class="topcoat-button-bar__button">Scatter</button>
+                 <button class="topcoat-button-bar__button" id="scatterbutton">Scatter</button>
                </label>
                <label class="topcoat-button-bar__item">
                  <input type="checkbox">
-                 <button class="topcoat-button-bar__button">Pie</button>
+                 <button class="topcoat-button-bar__button" id="piebutton">Pie</button>
                </label>
             </div>
-            <h3>Step 3: Select your chart colours</h3>
+            <h3>Step 2: Select your chart colours</h3>
             <canvas id="myCanvas" width="300" height="300">
             </canvas>
             <script src="colourselector.js"></script>
-          </div>
+          
+          <h3> Step 3: Input numerical data</h3>
+            <input type="text" name="dataBox" id="dataInput" />
+            <input type="button" value="Graph me!" onClick="submitdata(this.form);">
            <div class="output">
             <script src="chart.js"></script>
            </div>
+            </div>
             </div>
         </form>
     </div>
