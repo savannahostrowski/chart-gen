@@ -21,8 +21,19 @@ input[type="button"] {
     border-radius: 10px;
 }
 
+.output{
+  background-color: white;
+  border: 1px solid black;
+  z-index:200;
+  width:500px;
+  height:400px;
+  float:right;
+  margin-right: 50px;
+}
+
 .maindiv{
-	background-color: grey;
+	background-color: white;
+  border: 1px solid black;
 	width:900px;
 	height:800px;
 	margin-top: 30px;
@@ -32,16 +43,17 @@ input[type="button"] {
 
 }
 
+.numdata {
+  text-align:center;
+  margin-top: 10px;
+}
+
 h3 {
   color: black;
   font-size: 15px;
   font-family: 'Lato', sans-serif;
 }
 
-:focus {
-  outline-color: darkcyan;
-  outline-style: solid;
-}
 
 .full {
   width: 100%;

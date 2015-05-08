@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Graph Generator</title>
+    <title>Chart Generator</title>
     <!-- Google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -10,47 +10,46 @@
     <link rel="stylesheet" href="styles.css">
     <!--D3.js-->
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <!--Raphael-->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js" charset="utf-8"></script>
     <!--jQuery-->
     <script src="jquery.js"></script>
 </head>
 
 <body>
-<div class="maindiv">
+    <div class="maindiv">
         <form name="data">
-            <h2 class ="title">Enter your data into the text box below to visualize!</h2>
+            <h2 class="title">Enter your data into the text box below to visualize!</h2>
             <h3> Step 1: Select your chart type</h3>
             <div class="topcoat-button-bar">
-               <label class="topcoat-button-bar__item">
-                 <input type="checkbox">
-                 <button class="topcoat-button-bar__button" id="linebutton" onclick="console.log('coming soon')">Line</button>
-               </label>
-               <label class="topcoat-button-bar__item">
-                 <input type="checkbox">
-                 <button class="topcoat-button-bar__button" id="barbutton" onclick="barChart();">Bar</button>
-               </label>
-               <label class="topcoat-button-bar__item">
-                 <input type="checkbox">
-                 <button class="topcoat-button-bar__button" id="scatterbutton" onclick="console.log('coming soon')">Scatter</button>
-               </label>
-               <label class="topcoat-button-bar__item">
-                 <input type="checkbox">
-                 <button class="topcoat-button-bar__button" id="piebutton" onclick="console.log('coming soon')">Pie</button>
-               </label>
+                <label class="topcoat-button-bar__item">
+                    <input type="checkbox">
+                    <button class="topcoat-button-bar__button" id="linebutton" onclick="console.log('coming soon')">Line</button>
+                </label>
+                <label class="topcoat-button-bar__item">
+                    <input type="checkbox">
+                    <button class="topcoat-button-bar__button" id="barbutton" onclick="barChart();">Bar</button>
+                </label>
+                <label class="topcoat-button-bar__item">
+                    <input type="checkbox">
+                    <button class="topcoat-button-bar__button" id="scatterbutton" onclick="console.log('coming soon')">Scatter</button>
+                </label>
+                <label class="topcoat-button-bar__item">
+                    <input type="checkbox">
+                    <button class="topcoat-button-bar__button" id="piebutton" onclick="console.log('coming soon')">Pie</button>
+                </label>
+            </div>
+            <div class="output">
+                <script src="chart.js"></script>
             </div>
             <h3>Step 2: Select your chart colours</h3>
             <canvas id="myCanvas" width="300" height="300">
             </canvas>
             <script src="colourselector.js"></script>
-          
-          <h3> Step 3: Input numerical data</h3>
+            <h3> Step 3: Input numerical data</h3>
             <input type="text" name="dataBox" id="dataInput" />
             <input type="button" value="Graph me!" onClick="submitdata(this.form);">
-           <div class="output">
-            <script src="chart.js"></script>
-           </div>
-            </div>
+            <div class="numdata">
+              <h3> This is the numerical data you entered</h3>
+              <span id='values'>No data has been entered yet!</span>
             </div>
         </form>
     </div>

@@ -8,6 +8,10 @@ var svg = d3.select("body")
     .attr("height", h);
 
 
+function addScore() {
+    $('#values').text("Your score is " + score +"!"); 
+    levelUp();
+}
 
 //submit data by clicking button
 //converts string data to an array
@@ -17,8 +21,8 @@ function submitdata(frm) {
         data[i] = +data[i];
     }
     console.log('The data used is ' + data);
+    displayData(data);
 }
-
 
 //bar function
 function barChart() {
